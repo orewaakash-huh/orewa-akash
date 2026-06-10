@@ -15,3 +15,5 @@ fi
 echo
 echo "[✓] Installation Complete!"
 echo "[✓] Restart Termux"
+
+cd $HOME
