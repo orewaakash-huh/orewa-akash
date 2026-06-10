@@ -1,19 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 clear
+echo "[+] Installing Banner..."
 
-echo "[+] Installing Termux Banner..."
+cp banner.sh $HOME/
+chmod +x $HOME/banner.sh
 
-chmod +x banner.sh
-
-cp banner.sh $HOME/banner.sh
-
-if ! grep -q "banner.sh" $HOME/.bashrc 2>/dev/null; then
-    echo "bash \$HOME/banner.sh" >> $HOME/.bashrc
-fi
-
-echo
-echo "[✓] Installation Complete!"
-echo "[✓] Restart Termux"
-
-cd $HOME
+echo "[✓] Done!"
+echo "[✓] Run manually: bash ~/banner.sh"
